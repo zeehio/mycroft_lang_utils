@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>parse - mycroft_lang_utils</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "parse";
+    var mkdocs_page_input_path = "mycroft_lang_utils.parse.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> mycroft_lang_utils</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.format/">format</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">parse</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#module-mycroft_lang_utilsparse">Module mycroft_lang_utils.parse</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#extract95datetime">extract_datetime</a></li>
+        
+            <li><a class="toctree-l3" href="#extract95duration">extract_duration</a></li>
+        
+            <li><a class="toctree-l3" href="#extract_number">extract_number</a></li>
+        
+            <li><a class="toctree-l3" href="#extract_numbers">extract_numbers</a></li>
+        
+            <li><a class="toctree-l3" href="#get_gender">get_gender</a></li>
+        
+            <li><a class="toctree-l3" href="#normalize">normalize</a></li>
+        
+            <li><a class="toctree-l3" href="#match95one">match_one</a></li>
+        
+            <li><a class="toctree-l3" href="#fuzzy_match">fuzzy_match</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.time/">time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">lang</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang/">lang</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_common/">format_common</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_common/">parse_common</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_de/">format_de</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_pt/">format_pt</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_hu/">format_hu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_sv/">format_sv</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_en/">format_en</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_nl/">format_nl</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_es/">format_es</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_fr/">format_fr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_it/">format_it</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_da/">format_da</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_es/">parse_es</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_sv/">parse_sv</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_pt/">parse_pt</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_de/">parse_de</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_fr/">parse_fr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_en/">parse_en</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_da/">parse_da</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_it/">parse_it</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.bracket_expansion/">bracket_expansion</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">mycroft_lang_utils</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>parse</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="module-mycroft_lang_utilsparse">Module mycroft_lang_utils.parse</h2>
+<h3 id="extract95datetime">extract_datetime</h3>
+<p><code>def extract_datetime(text, anchorDate=None, lang=None, default_time=None)</code></p>
+<p>Extracts date and time information from a sentence.  Parses many of the
+common ways that humans express dates and times, including relative dates
+like "5 days from today", "tomorrow', and "Tuesday".</p>
+<p>Vague terminology are given arbitrary values, like:
+    - morning = 8 AM
+    - afternoon = 3 PM
+    - evening = 7 PM</p>
+<p>If a time isn't supplied or implied, the function defaults to 12 AM</p>
+<p>Args:</p>
+<pre><code>text (str): the text to be interpreted
+anchorDate (:obj:`datetime`, optional): the date to be used for
+    relative dating (for example, what does "tomorrow" mean?).
+    Defaults to the current local date/time.
+lang (str): the BCP-47 code for the language to use, None uses default
+default_time (datetime.time): time to use if none was found in
+    the input string.
+</code></pre>
+<p>Returns:</p>
+<pre><code>[:obj:`datetime`, :obj:`str`]: 'datetime' is the extracted date
+    as a datetime object in the user's local timezone.
+    'leftover_string' is the original phrase with all date and time
+    related keywords stripped out. See examples for further
+    clarification
+
+    Returns 'None' if no date or time related text is found.
+</code></pre>
+<p>Examples:</p>
+<pre><code>&gt;&gt;&gt; extract_datetime(
+... "What is the weather like the day after tomorrow?",
+... datetime(2017, 06, 30, 00, 00)
+... )
+[datetime.datetime(2017, 7, 2, 0, 0), 'what is weather like']
+
+&gt;&gt;&gt; extract_datetime(
+... "Set up an appointment 2 weeks from Sunday at 5 pm",
+... datetime(2016, 02, 19, 00, 00)
+... )
+[datetime.datetime(2016, 3, 6, 17, 0), 'set up appointment']
+
+&gt;&gt;&gt; extract_datetime(
+... "Set up an appointment",
+... datetime(2016, 02, 19, 00, 00)
+... )
+None
+</code></pre>
+<h3 id="extract95duration">extract_duration</h3>
+<p><code>def extract_duration(text, lang=None)</code></p>
+<p>Convert an english phrase into a number of seconds</p>
+<p>Convert things like:
+    "10 minute"
+    "2 and a half hours"
+    "3 days 8 hours 10 minutes and 49 seconds"</p>
+<p>into an int, representing the total number of seconds.</p>
+<p>The words used in the duration will be consumed, and
+the remainder returned.</p>
+<p>As an example, "set a timer for 5 minutes" would return
+(300, "set a timer for").</p>
+<p>Args:</p>
+<pre><code>text (str): string containing a duration
+lang (str): the BCP-47 code for the language to use, None uses default
+</code></pre>
+<p>Returns:</p>
+<pre><code>(timedelta, str):
+            A tuple containing the duration and the remaining text
+            not consumed in the parsing. The first value will
+            be None if no duration is found. The text returned
+            will have whitespace stripped from the ends.
+</code></pre>
+<h3 id="extract_number">extract_number</h3>
+<p><code>def extract_number(text, short_scale=True, ordinals=False, lang=None)</code></p>
+<p>Takes in a string and extracts a number.</p>
+<p>Args:</p>
+<pre><code>text (str): the string to extract a number from
+short_scale (bool): Use "short scale" or "long scale" for large
+    numbers -- over a million.  The default is short scale, which
+    is now common in most English speaking countries.
+    See https://en.wikipedia.org/wiki/Names_of_large_numbers
+ordinals (bool): consider ordinal numbers, e.g. third=3 instead of 1/3
+lang (str): the BCP-47 code for the language to use, None uses default
+</code></pre>
+<p>Returns:</p>
+<pre><code>(int, float or False): The number extracted or False if the input
+                       text contains no numbers
+</code></pre>
+<h3 id="extract_numbers">extract_numbers</h3>
+<p><code>def extract_numbers(text, short_scale=True, ordinals=False, lang=None)</code></p>
+<p>Takes in a string and extracts a list of numbers.</p>
+<p>Args:</p>
+<pre><code>text (str): the string to extract a number from
+short_scale (bool): Use "short scale" or "long scale" for large
+    numbers -- over a million.  The default is short scale, which
+    is now common in most English speaking countries.
+    See https://en.wikipedia.org/wiki/Names_of_large_numbers
+ordinals (bool): consider ordinal numbers, e.g. third=3 instead of 1/3
+lang (str): the BCP-47 code for the language to use, None uses default
+</code></pre>
+<p>Returns:</p>
+<pre><code>list: list of extracted numbers as floats, or empty list if none found
+</code></pre>
+<h3 id="get_gender">get_gender</h3>
+<p><code>def get_gender(word, context='', lang=None)</code></p>
+<p>Guess the gender of a word</p>
+<p>Some languages assign genders to specific words.  This method will attempt
+to determine the gender, optionally using the provided context sentence.</p>
+<p>Args:</p>
+<pre><code>word (str): The word to look up
+context (str, optional): String containing word, for context
+lang (str): the BCP-47 code for the language to use, None uses default
+</code></pre>
+<p>Returns:</p>
+<pre><code>str: The code "m" (male), "f" (female) or "n" (neutral) for the gender,
+     or None if unknown/or unused in the given language.
+</code></pre>
+<h3 id="normalize">normalize</h3>
+<p><code>def normalize(text, lang=None, remove_articles=True)</code></p>
+<p>Prepare a string for parsing</p>
+<p>This function prepares the given text for parsing by making
+numbers consistent, getting rid of contractions, etc.</p>
+<p>Args:</p>
+<pre><code>text (str): the string to normalize
+lang (str): the BCP-47 code for the language to use, None uses default
+remove_articles (bool): whether to remove articles (like 'a', or
+                        'the'). True by default.
+</code></pre>
+<p>Returns:</p>
+<pre><code>(str): The normalized string.
+</code></pre>
+<h3 id="match95one">match_one</h3>
+<p><code>def match_one(query, choices)</code></p>
+<p>Find best match from a list or dictionary given an input</p>
+<p>Arguments:</p>
+<pre><code>query:   string to test
+choices: list or dictionary of choices
+</code></pre>
+<p>Returns: </p>
+<pre><code>tuple with best match, score
+</code></pre>
+<h3 id="fuzzy_match">fuzzy_match</h3>
+<p><code>def fuzzy_match(x, against)</code>
+ Perform a 'fuzzy' comparison between two strings.</p>
+<p>Returns:</p>
+<pre><code>float: match percentage -- 1.0 for perfect match,
+       down to 0.0 for no match at all.
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../mycroft_lang_utils.time/" class="btn btn-neutral float-right" title="time">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../mycroft_lang_utils.format/" class="btn btn-neutral" title="format"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../mycroft_lang_utils.format/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../mycroft_lang_utils.time/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

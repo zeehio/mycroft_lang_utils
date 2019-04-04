@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>bracket_expansion - mycroft_lang_utils</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "bracket_expansion";
+    var mkdocs_page_input_path = "mycroft_lang_utils.bracket_expansion.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> mycroft_lang_utils</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.format/">format</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.parse/">parse</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../mycroft_lang_utils.time/">time</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">lang</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang/">lang</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_common/">format_common</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_common/">parse_common</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_de/">format_de</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_pt/">format_pt</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_hu/">format_hu</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_sv/">format_sv</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_en/">format_en</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_nl/">format_nl</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_es/">format_es</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_fr/">format_fr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_it/">format_it</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.format_da/">format_da</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_es/">parse_es</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_sv/">parse_sv</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_pt/">parse_pt</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_de/">parse_de</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_fr/">parse_fr</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_en/">parse_en</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_da/">parse_da</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../mycroft_lang_utils.lang.parse_it/">parse_it</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">bracket_expansion</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#module-mycroft_lang_utilsbracket_expansion">Module mycroft_lang_utils.bracket_expansion</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#fragment">Fragment</a></li>
+        
+            <li><a class="toctree-l3" href="#options">Options</a></li>
+        
+            <li><a class="toctree-l3" href="#sentence">Sentence</a></li>
+        
+            <li><a class="toctree-l3" href="#sentencetreeparser">SentenceTreeParser</a></li>
+        
+            <li><a class="toctree-l3" href="#word">Word</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">mycroft_lang_utils</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>bracket_expansion</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h2 id="module-mycroft_lang_utilsbracket_expansion">Module mycroft_lang_utils.bracket_expansion</h2>
+<h3 id="fragment">Fragment</h3>
+<p>(Abstract) empty sentence fragment</p>
+<h4 id="expand">expand</h4>
+<pre><code>
+def expand(self)
+
+</code></pre>
+
+<p>Expanded version of the fragment. In this case an empty sentence.</p>
+<p>Returns:</p>
+<pre><code>List&lt;List&lt;str&gt;&gt;: A list with an empty sentence (= token/string list)
+</code></pre>
+<h4 id="tree">tree</h4>
+<pre><code>
+def tree(self)
+
+</code></pre>
+
+<p>Return the represented sentence tree as raw data.</p>
+<h3 id="options">Options</h3>
+<p>A Combination of possible sub-sentences.</p>
+<p>Construct with List<Fragment> as argument.</p>
+<h4 id="expand_1">expand</h4>
+<pre><code>
+def expand(self)
+
+</code></pre>
+
+<p>Returns all of its options as seperated sub-sentences.</p>
+<p>Returns:</p>
+<pre><code>List&lt;List&lt;str&gt;&gt;: A list containing the sentences created by all
+                    expansions of its sub-sentences
+</code></pre>
+<h3 id="sentence">Sentence</h3>
+<p>A Sentence made of several concatenations/words.
+Construct with a List<Fragment> as argument.</p>
+<h4 id="expand_2">expand</h4>
+<pre><code>
+def expand(self)
+
+</code></pre>
+
+<p>Creates a combination of all sub-sentences.</p>
+<p>Returns:</p>
+<pre><code>List&lt;List&lt;str&gt;&gt;: A list with all subsentence expansions combined in
+                    every possible way
+</code></pre>
+<h3 id="sentencetreeparser">SentenceTreeParser</h3>
+<p>Generate sentence token trees from a list of tokens
+['1', '(', '2', '|', '3, ')'] -&gt; [['1', '2'], ['1', '3']]</p>
+<h4 id="expand95parentheses">expand_parentheses</h4>
+<pre><code>
+def expand_parentheses(self)
+
+</code></pre>
+
+<h3 id="word">Word</h3>
+<p>Single word in the sentence tree.
+Construct with a string as argument.</p>
+<h4 id="expand_3">expand</h4>
+<pre><code>
+def expand(self)
+
+</code></pre>
+
+<p>Creates one sentence that contains exactly that word.</p>
+<p>Returns:</p>
+<pre><code>List&lt;List&lt;str&gt;&gt;: A list with the given string as sentence
+                    (= token/string list)
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../mycroft_lang_utils.lang.parse_it/" class="btn btn-neutral" title="parse_it"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../mycroft_lang_utils.lang.parse_it/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
