@@ -17,6 +17,10 @@ last synchronization - 04 Apr 2019
     + [Extract dates](#extract-dates)
   * [Credits](#credits)
   
+  
+[Read the docs](https://jarbasal.github.io/mycroft_lang_utils/)
+
+
 ## Format
 
 Convert data into spoken equivalents
