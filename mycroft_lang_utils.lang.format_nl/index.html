@@ -230,16 +230,18 @@
 <h3 id="fix95hour">fix_hour</h3>
 <p><code>def fix_hour(hour)</code></p>
 <h3 id="nice95number95nl">nice_number_nl</h3>
-<p><code>def nice_number_nl(number, speech, denominators)</code>
- Dutch helper for nice_number
-This function formats a float to human understandable functions. Like
-4.5 becomes "4 einhalb" for speech and "4 1/2" for text
-Args:
-    number (int or float): the float to format
-    speech (bool): format for speech (True) or display (False)
-    denominators (iter of ints): denominators to use, default [1 .. 20]
-Returns:
-    (str): The formatted string. </p>
+<p><code>def nice_number_nl(number, speech, denominators)</code></p>
+<p>Dutch helper for nice_number</p>
+<p>This function formats a float to human understandable functions. Like
+4.5 becomes "4 einhalb" for speech and "4 1/2" for text</p>
+<p>Args:</p>
+<pre><code>number (int or float): the float to format
+speech (bool): format for speech (True) or display (False)
+denominators (iter of ints): denominators to use, default [1 .. 20]
+</code></pre>
+<p>Returns:</p>
+<pre><code>(str): The formatted string.
+</code></pre>
 <h3 id="nice95ordinal95nl">nice_ordinal_nl</h3>
 <p><code>def nice_ordinal_nl(text)</code></p>
 <h3 id="nice95part95of95day95nl">nice_part_of_day_nl</h3>
@@ -248,25 +250,29 @@ Returns:
 <p><code>def nice_response_nl(text)</code></p>
 <h3 id="nice95time95nl">nice_time_nl</h3>
 <p><code>def nice_time_nl(dt, speech=True, use_24hour=False, use_ampm=False)</code>
- Format a time to a comfortable human format</p>
+Format a time to a comfortable human format</p>
 <p>For example, generate 'five thirty' for speech or '5:30' for
 text display.</p>
-<p>Args:
-    dt (datetime): date to format (assumes already in local timezone)
-    speech (bool): format for speech (default/True) or display (False)=Fal
-    use_24hour (bool): output in 24-hour/military or 12-hour format
-    use_ampm (bool): include the am/pm for 12-hour format
-Returns:
-    (str): The formatted time string </p>
+<p>Args:</p>
+<pre><code>dt (datetime): date to format (assumes already in local timezone)
+speech (bool): format for speech (default/True) or display (False)=Fal
+use_24hour (bool): output in 24-hour/military or 12-hour format
+use_ampm (bool): include the am/pm for 12-hour format
+</code></pre>
+<p>Returns:</p>
+<pre><code>(str): The formatted time string
+</code></pre>
 <h3 id="pronounce95number95nl">pronounce_number_nl</h3>
-<p><code>def pronounce_number_nl(num, places=2)</code>
- Convert a number to its spoken equivalent
-For example, '5.2' would return 'five point two'
-Args:
-    num(float or int): the number to pronounce (set limit below)
-    places(int): maximum decimal places to speak
-Returns:
-    (str): The pronounced number </p>
+<p><code>def pronounce_number_nl(num, places=2)</code></p>
+<p>Convert a number to its spoken equivalent
+For example, '5.2' would return 'five point two'</p>
+<p>Args:</p>
+<pre><code>num(float or int): the number to pronounce (set limit below)
+places(int): maximum decimal places to speak
+</code></pre>
+<p>Returns:</p>
+<pre><code>(str): The pronounced number
+</code></pre>
 <h3 id="pronounce95ordinal95nl">pronounce_ordinal_nl</h3>
 <p><code>def pronounce_ordinal_nl(num)</code></p>
               
